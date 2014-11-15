@@ -188,6 +188,8 @@
     }
 ```
 
+![配置](https://raw.githubusercontent.com/vicanso/articles/master/bigpipe.gif)
+
 
 ```
     GET /bigpipe 200 3027.767 ms - -
