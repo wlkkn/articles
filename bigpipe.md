@@ -2,6 +2,8 @@
 
 这里主要介绍一下在express中实现bigpipe，对于bigpipe不太了解的，可以先去了解[bigpipe](http://baike.baidu.com/view/4601904.htm?fr=aladdin)。
 
+![demo](https://raw.githubusercontent.com/vicanso/articles/master/pics/bigpipe.gif)
+
 
 ## 应用场景
 
@@ -188,7 +190,6 @@
     }
 ```
 
-![配置](https://raw.githubusercontent.com/vicanso/articles/master/bigpipe.gif)
 
 
 ```
@@ -197,4 +198,4 @@
 
 可以看出，使用bigpipe的方式和普通的方式最终使用的时间差不多（在不考虑网络延时之类），但是在现实中，由于bigpipe的方式是分段的将数据发送到浏览器，主体框架优化（用户很快就可以看到主体的数据以及浏览器可以尽早的加载css），接着新闻、文章和书籍慢慢的呈现。
 
-bigpipe是很好的实现方式，但是在开发中不要为技术而技术。其实我们开发网页，有很多的页面是可以做缓存的，我更倾向于可以缓存的页面使用普通的方式来实现，将render的html缓存在varnish之类，而对应实时性很高，无法缓存的页面（用户想关的），使用bigpipe等。
+bigpipe是很好的实现方式，但是在开发中不要为技术而技术。其实我们开发网页，有很多的页面是可以做缓存的，我更倾向于可以缓存的页面使用普通的方式来实现，将render的html缓存在varnish之类，而对应实时性很高，无法缓存的页面（用户相关的），使用bigpipe等。
