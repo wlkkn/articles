@@ -1,0 +1,13 @@
+{
+  "name": "static_file",
+  "description": "express static file handler",
+  "version": "0.0.1",
+  "author": {
+    "name": "vicanso 小墨鱼",
+    "email": "vicansocanbico@gmail.com"
+  },
+  "dependencies": {
+    "express": "^4.10.2",
+    "morgan": "^1.5.0"
+  }
+}
